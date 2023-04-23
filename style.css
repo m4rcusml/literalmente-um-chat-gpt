@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --cor01: #202C33;
+    --cor02: #111B21;
+    --cor03: #313D45;
+    --cor04: #d1d7db;
+    --cor05: #51B5E1;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 410px 1fr;
+    color: var(--cor04);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+header {
+    background-color: var(--cor01);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .8em;
+}
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-img img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+header .profile-img {
+    transform: scale(0.8);
+}
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+main {
+    background-color: var(--cor02);
+}
+.pesquisa-container {
+    height: 35px;
+    display: flex;
+    align-items: stretch;
+    padding: .5em .8em;
+}
+.barra-pesquisa {
+    background-color: var(--cor01);
+    width: 100%;
+    border-radius: .5em;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: .5em;
+}
+.barra-pesquisa > * {
+    background-color: transparent;
+    color: var(--cor04);
+    border: none;
+    outline: none;
+}
+.barra-pesquisa input::placeholder {
+    color: var(--cor04);
+    opacity: .5;
+}
+/* .barra-pesquisa input::-webkit-search-cancel-button {
+    display: none;
+} */
+.conversas > p {
+    text-align: center;
+    margin: .5em 1em 0 .8em;
+    padding: 1em 0;
+    border-top: 1px solid var(--cor03);
+    font-size: small;
+    color: var(--cor04);
+}
+.conversas > p > a {
+    text-decoration: none;
+}
+a {
+    cursor: pointer;
+    color: var(--cor05);
+}
+.chat {
+    cursor: pointer;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: stretch;
+    padding: .2em .8em;
+    align-content: center;
+}
+.chat:hover {
+    background-color: #2A3942;
+}
+.chat-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50px;
+}
+.chat-info:not(:last-child) {
+    border-bottom: 1px solid var(--cor03);
+}
+.nome-chat {
+    font-size: 1.1em;
+}
+.ultima-msg {
+    opacity: .6;
+    font-size: .9em;
+}
+
+.chat-content {
+    background-color: var(--cor01);
+    border-left: 1px solid var(--cor03);
+}
